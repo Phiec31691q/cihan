@@ -1,0 +1,10 @@
+{
+	"appId": "com.cihan.dunyahakimiyeti",
+	"appName": "CİHAN",
+	"webDir": "www",
+	"backgroundColor": "#0b1018",
+	"android": {
+		"backgroundColor": "#0b1018",
+		"allowMixedContent": false
+	}
+}

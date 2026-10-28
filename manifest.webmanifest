@@ -1,0 +1,25 @@
+{
+  "id": "/",
+  "name": "CİHAN: Dünya Hakimiyeti",
+  "short_name": "CİHAN",
+  "description": "Gerçek dünya haritasında ülkeni seç, ordunu kur, ittifaklar yap ve dünyaya hükmet. Büyük strateji oyunu.",
+  "lang": "tr",
+  "dir": "ltr",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "fullscreen",
+  "display_override": ["fullscreen", "standalone"],
+  "orientation": "landscape",
+  "background_color": "#0b1018",
+  "theme_color": "#0b1018",
+  "categories": ["games", "strategy", "entertainment"],
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "screenshots": [
+    { "src": "store/shot-1.jpg", "sizes": "1560x780", "type": "image/jpeg", "form_factor": "wide", "label": "Dünya haritası" },
+    { "src": "store/shot-2.jpg", "sizes": "1560x780", "type": "image/jpeg", "form_factor": "wide", "label": "Senaryo seçimi" }
+  ]
+}

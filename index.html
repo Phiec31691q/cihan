@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="theme-color" content="#0b1018">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="CİHAN">
+<meta name="description" content="Gerçek dünya haritasında ülkeni seç, ordunu kur, ittifaklar yap ve dünyaya hükmet.">
+<meta name="screen-orientation" content="landscape">
+<meta name="x5-orientation" content="landscape">
+<meta name="format-detection" content="telephone=no">
+<title>CİHAN — Dünya Hakimiyeti</title>
+
+<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-180.png">
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<canvas id="map"></canvas>
+
+<!-- LOADING -->
+<div id="boot" class="screen">
+  <div class="boot-bg"></div>
+  <div class="boot-inner">
+    <div class="logo"><span class="logo-top">Büyük Strateji</span><span class="logo-main">CİHAN</span><span class="logo-sub">Dünya Hakimiyeti</span></div>
+    <div class="bar"><div id="bootbar"></div></div>
+    <div id="bootmsg">Harita yükleniyor…</div>
+    <div id="boottip" class="boot-tip"></div>
+  </div>
+</div>
+
+<!-- MAIN MENU -->
+<div id="menu" class="screen hidden">
+  <div class="menu-bg"></div>
+  <div class="menu-rays"></div>
+  <canvas id="menufx"></canvas>
+  <div class="menu-vignette"></div>
+  <div class="menu-left">
+    <div class="m-brand m-in" style="--d:.02s">
+      <img class="m-emblem" src="icons/icon-192.png" alt="">
+      <div class="logo big"><span class="logo-top">Büyük Strateji</span><span class="logo-main">CİHAN</span><span class="logo-sub">Dünya Hakimiyeti</span></div>
+    </div>
+    <nav class="menu-btns" id="menubtns"></nav>
+  </div>
+  <aside class="m-show m-in" id="mshow" style="--d:.3s"></aside>
+  <div class="m-ticker m-in" style="--d:.5s"><div class="mt-lbl"><span class="dot"></span>DÜNYA GÜNDEMİ</div><div class="mt-track"><div class="mt-move" id="mtmove"></div></div></div>
+  <div class="menu-foot" id="menufoot"></div>
+</div>
+
+<!-- SCENARIO SELECT -->
+<div id="scen" class="screen hidden">
+  <div class="menu-bg dim"></div>
+  <div class="scen-wrap">
+    <header class="scr-head"><button class="btn ghost" data-act="back-menu" id="scenBack"></button><h1>Senaryo Seç</h1><div></div></header>
+    <div class="scen-body">
+      <div class="scen-grid" id="scengrid"></div>
+      <aside class="scen-detail" id="scendetail"></aside>
+    </div>
+  </div>
+</div>
+
+<!-- COUNTRY PICK -->
+<div id="pick" class="hidden">
+  <div class="pick-top"><button class="btn ghost" id="pickBack"></button><div class="pick-title"><h2>Ülkeni Seç</h2><span id="pickScen"></span></div><div class="search"><span id="pickSearchIc"></span><input id="pickSearch" placeholder="Ülke ara…" autocomplete="off"><div id="pickResults" class="search-res"></div></div></div>
+  <div class="pick-quick" id="pickQuick"></div>
+  <aside class="pick-card" id="pickCard"></aside>
+</div>
+
+<!-- HUD -->
+<div id="hud" class="hidden">
+  <header id="topbar"></header>
+  <div id="ticker"><div class="tk-label"><span class="dot"></span>SON DAKİKA</div><div class="tk-track"><div class="tk-move" id="tkmove"></div></div><button class="tk-open" id="tkopen"></button></div>
+  <nav id="leftnav"></nav>
+  <section id="panel" class="hidden"><header class="pn-head"><div class="pn-title" id="pnTitle"></div><button class="x" id="pnClose"></button></header><div class="pn-body" id="pnBody"></div></section>
+  <aside id="card" class="hidden"></aside>
+  <div id="modes"></div>
+  <div id="zoom"></div>
+  <div id="mini"><canvas id="minicv" width="240" height="159"></canvas><div class="mini-lbl" id="miniLbl"></div></div>
+  <div id="targetBanner" class="hidden"></div>
+  <div id="warbar"></div>
+</div>
+<div id="toasts"></div>
+<div id="modals"></div>
+<div id="tip" class="hidden"></div>
+<div id="hover" class="hidden"></div>
+<div id="rotate"><div class="rot-in"><div class="rot-phone"><i></i></div><h3>Cihazını Yatay Çevir</h3><p>CİHAN yatay ekranda oynanır.</p></div></div>
+
+<script src="data/world.js"></script>
+<script src="data/pixmap.js"></script>
+<script src="data/flags.js"></script>
+<script src="data/cities.js"></script>
+<script src="data/icons.js"></script>
+<script src="js/data.js"></script>
+<script src="js/engine.js"></script>
+<script src="js/events.js"></script>
+<script src="js/render.js"></script>
+<script src="js/sfx.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/panels.js"></script>
+<script src="js/leaders.js"></script>
+<script src="js/menu.js"></script>
+<script src="js/native.js"></script>
+<script src="js/mobile.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
